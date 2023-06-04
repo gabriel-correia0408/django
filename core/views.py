@@ -26,3 +26,6 @@ def produto(request, pk):
         'produto': prod
     }
     return render(request, 'produto.html', context)
+
+def cliente(request):
+    pass
