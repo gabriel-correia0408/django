@@ -118,6 +118,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/' # Usado durante desenvovlimento
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # Usado durante a produção
+LOGOUT_REDIRECT_URL = 'index'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
