@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 
 
+from django.http import HttpResponse
+from django.template import loader
 from core.models import Produto
 
 # Create your views here.
@@ -29,7 +31,5 @@ def produto(request, pk):
     return render(request, 'produto.html', context)
 
 def error404(request, exception):
+    template = ren
     return render(request, '404.html')
-
-def teste():
-    pass
