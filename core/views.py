@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 
 from core.models import Produto
@@ -20,12 +20,13 @@ def contato(request):
     return render(request, 'contato.html')
 
 def produto(request, pk):
-    prod = Produto.objects.get(id=pk)
+    #prod = Produto.objects.get(id=pk)
+    prod = get_object_or_404(Produto, id=pk)
 
     context = {
         'produto': prod
     }
     return render(request, 'produto.html', context)
 
-def cliente(request):
-    pass
+def error404(request, exception):
+    return render(request, '404.html')
